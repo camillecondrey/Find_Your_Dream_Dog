@@ -1,0 +1,96 @@
+* {
+	box-sizing: border-box;
+}
+
+.container {
+	height: 40px;
+	display: block;
+	margin-top: 0;
+	background-color: white;
+	box-shadow: 0 1px 1px rgba(173,168,168,.1);
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.mission-statement {
+	text-align: center;
+	margin-left: 300px;
+	margin-right: 300px;
+}
+
+.steps {
+	margin:0 auto;
+	display: inline-block;
+	/*width: 800px;*/
+
+}
+
+.steps div {
+	display: inline-block;
+	text-align: center;
+	margin-top: 100px;
+	border: 1px gray solid;
+	/*width: 33.33%;*/
+}
+
+.step-1 {
+	margin-left: 400px;
+
+}
+
+.step-2 {
+
+	margin-left: 70px;
+}
+
+.step-3 {
+	/*margin-right: 400px;*/
+	margin-left: 70px;
+}
+
+.start-quiz {
+	margin:0 auto;
+	display: block;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.quiz-bypass {
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+.search {
+	display: inline-block;
+	width: 300px;
+	height: 80px;
+	box-shadow: 0 1px 1px rgba(173,168,168,.1);
+    border: 1px solid rgba(0,0,0,.1);
+    /*background-color: white;*/
+    font-size: 20px;
+}
+
+.breed-search {
+    margin-left: 240px;  
+}
+
+.search-div {
+	font-size: 0;
+}
+
+.quiz-description > p {
+	padding-bottom: 0;
+}
+
+.card {
+	display: inline-block;
+}
+
+.card-img-top {
+	width: 318px;
+	height: 180px;
+}
+
+.submit {}

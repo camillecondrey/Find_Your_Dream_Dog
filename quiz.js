@@ -88,12 +88,51 @@ var questions = [
   } 
 ];
 
+
+var selections = []; 
+var selected = $('.list-group-item').val();
+
 var currentQuestion = questions[0];
-userAnswer="small"
+userAnswer=  selected;
 breedsResults = currentQuestion.results[userAnswer];
 for(i in breedsResults){
   breeds[i]++;
+  // console.log(breedsResults);
 }
+
+// function choose(){
+// 	selections.push(selected);
+// }
+
+console.log(selections);
+
+
+$('.list-group-item').click(function(event){
+	event.preventDefault();
+	var selected = $('.list-group-item').val();
+	if (selected){
+		selections.push(selected);
+	}
+})
+
+
+
+
+
+function answerListInput(index){
+	var answerList = $('.list-group');
+	for (var i=0; i < questions[index].answers.length; i++){
+		var item = $('.list-group-item')
+		var input = i;
+		input += questions[index].answers[i];
+		item.append(input);
+		answerList.append(item);
+}
+return answerList;
+}
+
+
+
     
 /*
 if(answer=="small"){
@@ -115,6 +154,23 @@ for(breed in breeds){
     maxBreed=breed;
   }
 }
+
+
+// function createResultsElement();
+
+
+// $("button").click(function() {
+//     $('html,body').animate({
+//         scrollTop: $('#next').offset().top},
+//         'slow');
+// });
+
+$( function() {
+  $('.list-group-item').click( function() {
+    $(this).css('background', '#f0ad4e')
+    $(this).css('color', 'white')
+  } );
+} );
 
 
 

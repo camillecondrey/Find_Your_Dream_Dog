@@ -38,45 +38,6 @@ button > a {
 	color: white;
 }
 
-.home {
-	margin-top: auto;
-	margin-bottom: auto;
-	margin-left: 20px;
-	font-size: 25px;
-	color: #3D3D3D;
-}
-
-.list-group-item {
-	width: 400px;
-	font-family: 'Poppins', sans-serif;
-}
-
-button:hover {
-	background-color: #f0ad4e;
-	color: white;
-}
-
-button {
-	font-family: 'Poppins', sans-serif;
-}
-
-.container > p {
-	margin-top: 40px;
-	font-size: 20px;
-}
-
-.on-click {
-	background-color: #f0ad4e !important;
-	color: white;
-}
-
-.submit {
-	margin:0 auto;
-	display: block;
-	margin-top: 65px;
-	margin-bottom: 15px;
-	width: 170px;
-	height: 50px;
-	font-size: 20px;
-	font-family: 'Poppins', sans-serif;
+.hidden {
+	display: none;
 }

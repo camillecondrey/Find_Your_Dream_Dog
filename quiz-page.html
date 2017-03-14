@@ -5,6 +5,7 @@
 <link rel="stylesheet" type="text/css" href="quiz.css">	
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Poppins:300|Roboto+Slab:300" rel="stylesheet">
+<link rel="stylesheet" type="text/css" href="float_grid.css">
 </head>
 <body>
 <div class="nav">
@@ -16,62 +17,63 @@
 
 <p>1. What size dog would you consider?</p>
 
-<form class="q1">
-<div class="list-group">
-  <button type="button" class="list-group-item" value="small">Small</button>
-  <button type="button" class="list-group-item" value="medium">Medium</button>
-  <button type="button" class="list-group-item" value="large">Large</button>
-  <button type="button" class="list-group-item" value="any-size">Any Size</button>
+
+<div class="list-group q1" data-id="0">
+  <button type="button" class="list-group-item" value="Small">Small</button>
+  <button type="button" class="list-group-item" value="Medium">Medium</button>
+  <button type="button" class="list-group-item" value="Large">Large</button>
+  <button type="button" class="list-group-item" value="Any Size">Any Size</button>
 </div>
-</form>
+
 
 <p>2. Are you or is someone in your household allergic to dogs?</p>
 
-<form class="q2">
-<div class="list-group">
-  <button type="button" class="list-group-item" value="yes">Yes</button>
-  <button type="button" class="list-group-item" value="no">No</button>
-  <button type="button" class="list-group-item" value="I-dont-know">I don't know</button>
+
+<div class="list-group q2" data-id="1">
+  <button type="button" class="list-group-item" value="Yes">Yes</button>
+  <button type="button" class="list-group-item" value="No">No</button>
+  <button type="button" class="list-group-item" value="I don't know">I don't know</button>
  </div>
- </form>
+
 
 <p>3. How much do you exercise?</p>
 
-<form class="q3">
-<div class="list-group" id="next">
-  <button type="button" class="list-group-item">Frequently</button>
-  <button type="button" class="list-group-item">Occasionally</button>
-  <button type="button" class="list-group-item">Hardly Ever</button>
+<div class="list-group q3" data-id="2">
+  <button type="button" class="list-group-item" value="Frequently">Frequently</button>
+  <button type="button" class="list-group-item" value="Occasionally">Occasionally</button>
+  <button type="button" class="list-group-item" value="Hardly Ever">Hardly Ever</button>
  </div>
- </form>
+
 
 <p>4. Do you have a yard or room for a dog with lots of energy?</p>
 
-<form class="q4">
-<div class="list-group" id="next">
-  <button type="button" class="list-group-item">Yes</button>
-  <button type="button" class="list-group-item">No</button>
+
+<div class="list-group q4" data-id="3">
+  <button type="button" class="list-group-item" value="Yes">Yes</button>
+  <button type="button" class="list-group-item" value="No">No</button>
 </div>
-</form>
+
 
 <p>5. Are you planning to bring a new baby into your home within the next few years?</p>
 
-<form class="q5">
-<div class="list-group">
-  <button type="button" class="list-group-item">Yes</button>
-  <button type="button" class="list-group-item">No</button>
+
+<div class="list-group q5" data-id="4">
+  <button type="button" class="list-group-item" value="Yes">Yes</button>
+  <button type="button" class="list-group-item" value="No">No</button>
 </div>
-</form>
+
 
 <p>6. How much does fur bother you?</p>
 
-<form class="q6">
-<div class="list-group">
-  <button type="button" class="list-group-item">Doesn't bother me at all</button>
-  <button type="button" class="list-group-item">Cannot stand it</button>
-  <button type="button" class="list-group-item">A little fur is okay</button>
+
+<div class="list-group q6" data-id="5">
+  <button type="button" class="list-group-item" value="Doesn't bother me at all">Doesn't bother me at all</button>
+  <button type="button" class="list-group-item" value="Cannot stand it">Cannot stand it</button>
+  <button type="button" class="list-group-item" value="A little fur is okay">A little fur is okay</button>
  </div>
- </form>
+
+
+<button type="button" class="btn btn-warning submit"><!-- <a href="results-search.html"> -->Find matches!</a></button>
 </div>
 
 <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>

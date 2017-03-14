@@ -22,7 +22,7 @@
 .home {
 	margin-top: auto;
 	margin-bottom: auto;
-	margin-left: 20px;
+	margin-left: 20px !important;
 	font-size: 25px;
 	color: #3D3D3D;
 }
@@ -35,22 +35,19 @@
 	font-size: 20px;
 }
 
-.steps {
+/*.steps {
 	margin:0 auto;
 	display: inline-block;
 	margin-top: 50px;
+	height: 0px;
+	margin-bottom: 60px;
 
-}
+}*/
 
-.steps div {
-	display: inline-block;
-	text-align: center;
-	/*margin-top: 100px;*/
-	/*border: 1px gray solid;*/
-	/*width: 33.33%;*/
-}
 
-.step-images div {
+
+
+/*.step-images div {
 	margin-top: 70px;
 	display: inline-block;
 	margin:0 auto;
@@ -58,6 +55,7 @@
 
 .steps-images {
 	margin-top: 70px;
+
 }
 
 .step-1-image {
@@ -81,17 +79,45 @@
 
 .step-1 {
 	margin-left: 270px;
+	*/
 
+#dogs {
+	width: 185px;
 }
 
-.step-2 {
-	margin-left: 145px;
+.step-card {
+  border: none;	
+  margin-bottom: 20px;
+  margin: 20px;
+  text-align: center !important;
 }
 
-.step-3 {
-	/*margin-right: 400px;*/
-	margin-left: 142px;
+.card-image {
+  width: 100%;
 }
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.card-content p {
+  margin: 0.5em 0;
+}
+
+.image {
+	width: 140px;
+	height: 140px;
+	text-align: center !important;
+	margin: auto;
+	margin-bottom: 20px;
+}
+
+
 
 #start-quiz {
 	margin:0 auto;
@@ -156,13 +182,27 @@ button > a {
 	padding-bottom: 0;
 }
 
-.card {
-	display: inline-block;
+/*.card {
+	display: inline-block !important; 
+	margin: 10px;
+	width: 33.33%;
+}
+
+.card-img-top {
+	width: 318px;
+	height: 180px;
+}*/
+
+.submit {}
+
+
+.dog-card {
+	margin-left: 40px;
+	margin-right: 40px;
+	margin-top: 40px;
 }
 
 .card-img-top {
 	width: 318px;
 	height: 180px;
 }
-
-.submit {}

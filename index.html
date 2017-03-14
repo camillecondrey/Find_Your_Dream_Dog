@@ -5,49 +5,90 @@
 	<link rel="stylesheet" type="text/css" href="main.css">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 	<link href="https://fonts.googleapis.com/css?family=Poppins:300|Roboto+Slab:300" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="float_grid.css">
 </head>
 <body>
+
 <div class="nav">
-	<div class="home"></a>Find Your Dream Dog!<img class="logo" src="https://img.tineye.com/result/6b3508ebfb39bfbd04f1a755809cd03f010e1f23f18853e105405e3a7c89f030?size=160"></div>
-	<button type="button" class="btn btn-warning" id="donate">Donate to the Cause!</button>
+
+		<div class="home row">
+			
+				</a>Find Your Dream Dog!
+					<img class="logo" src="https://img.tineye.com/result/6b3508ebfb39bfbd04f1a755809cd03f010e1f23f18853e105405e3a7c89f030?size=160"></div>
+						<button type="button" class="btn btn-warning" id="donate">Donate to the Cause!</button>
+				
+		</div>	
+</div>	
+<div class="col-12">
+	<div class="mission-statement">
+		<p><strong>FYDD</strong> is dedicated to matching you with the right breed, and encouraging 
+		<br>you to adopt from a shelter instead purchasing from of a pet store. When you Adopt, you find your New Best Friend and you Save a Life. Learn more <a href="http://www.animalleague.org/expert-advice/adoption/articles/why-adopt.html?referrer=https://www.google.com/">here.</a></p>
+	</div>
 </div>
+<!-- <div class="step-images" style="margin-top: 70px;">
+	<div class="col-4"><img class="step-1-image" src="http://images.clipartpanda.com/quiz-clipart-quiz-2-md.png"></div>
 
-<div class="mission-statement">
-	<p><strong>FYDD</strong> is dedicated to matching you with the right breed, and encouraging 
-	<br>you to adopt from a shelter instead purchasing from of a pet store. When you Adopt, you find your New Best Friend and you Save a Life. Learn more <a href="http://www.animalleague.org/expert-advice/adoption/articles/why-adopt.html?referrer=https://www.google.com/">here.</a></p>
-</div>
+	<div class="col-4"><img class="step-2-image" src="https://static.vecteezy.com/system/resources/previews/000/134/517/non_2x/vector-dog-head-icons.jpg"></div>
 
-<div class="step-images" style="margin-top: 70px;">
-	<div><img class="step-1-image" src="http://images.clipartpanda.com/quiz-clipart-quiz-2-md.png"></div>
+	<div class="col-4"><img class="step-3-image" src="https://cdn1.iconfinder.com/data/icons/mirrored-twins-icon-set-hollow/512/PixelKit_point_marker_icon.png"></div>
+</div> -->
 
-	<div><img class="step-2-image" src="https://static.vecteezy.com/system/resources/previews/000/134/517/non_2x/vector-dog-head-icons.jpg"></div>
-
-	<div><img class="step-3-image" src="https://cdn1.iconfinder.com/data/icons/mirrored-twins-icon-set-hollow/512/PixelKit_point_marker_icon.png"></div>
-</div>
-
-<div class="steps">
-<div class="step-1">Answer questions to 
+<!-- <div class="steps">
+<div class="step-1 col-4">Answer questions to 
 <br>determine compatibilty  
 </div>
 
-<div class="step-2">Discover the breeds 
+<div class="step-2 col-4">Discover the breeds 
 <br>you matched with
 </div>
 
-<div class="step-3">Search adoptable 
+<div class="step-3 col-4">Search adoptable 
 <br>breeds closest to you</div>
-</div>
+</div> -->
+
+<div class="row">
+		
+		<div class="col-4">
+			<div class="step-card">
+				<img class="image" src="http://images.clipartpanda.com/quiz-clipart-quiz-2-md.png">
+				<div class="card-caption">
+					<p>Answer questions to 
+					<br>determine compatibilty <p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-4">
+			<div class="step-card">
+				<img class="image" id="dogs" src="https://static.vecteezy.com/system/resources/previews/000/134/517/non_2x/vector-dog-head-icons.jpg">
+				<div class="card-caption">
+					<p>Discover the breeds 
+					<br>you matched with<p>
+				</div>
+			</div>
+		</div>
+		
+		<div class="col-4">
+			<div class="step-card">
+				<img class="image" src="https://cdn1.iconfinder.com/data/icons/mirrored-twins-icon-set-hollow/512/PixelKit_point_marker_icon.png">
+				<div class="card-caption">	
+					<p>Search adoptable 
+					<br>breeds closest to you</p>
+				</div>
+			</div>
+		</div>
+</div>		
 
 <button type="button" class="btn btn-warning" id="start-quiz"><a href="quiz-page.html">Start Quiz</a></button>
 
-<div class="quiz-bypass">Already know the breed of your dreams? Skip the quiz and search now</div>
+<div class="quiz-bypass">Already know the breed of your dreams? Skip the quiz and search now:</div>
 
 <form class="search-div">
 		<label for="query"></label>
-		<input type="text" class="search breed-search"></input>
-		<input type="text" class="search location-search"></input>
-		<input type="text" class="search distance-search"></input>
-		<button class="submit">Submit</button>
+			<input type="text" class="search breed-search"></input>
+				<input type="text" class="search location-search"></input>
+					<input type="text" class="search distance-search"></input>
+						<button class="submit">Submit</button>
 </form>
 
 <div class="results"></div>

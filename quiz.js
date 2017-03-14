@@ -1,4 +1,7 @@
-$(document).ready(function () { 
+
+
+
+
 
 var breeds={
  	'American Pit Bull Terrier': 0, 
@@ -82,95 +85,97 @@ var questions = [
     		   					"Yorkshire Terrier", 'Beagle','Labrador Retriever', 'Australian Shepherd', 'Border Collie', 
     		   					'American Pit Bull Terrier', 'Boxer', 'Golden Retriever', 'Poodle', 'German Shepherd', 
     		   					"Rottweiler", "American Bulldog"],
-    		   	"Cannot stand it": ["Poodle", "Shih Tsu", "Chihuahua", "Yorkshire Terrier", "Jack Russell", "Boxer"],
+    		   	"Cannot stand it": ["Poodle", "Shih Tsu", "Chihuahua", "Yorkshire Terrier", "Jack Russell Terrier", "Boxer"],
     		   	"A little fur is okay": ["American Pit Bull Terrier", "Beagle", "Poodle", "Boxer", "Shih Tsu", 
-    		   						"Chihuahua", "Yorkshire", "Jack Russell", "English Bulldog", "American Bulldog"]}			
+    		   						"Chihuahua", "Yorkshire Terrier", "Jack Russell Terrier", "English Bulldog", "American Bulldog"]}			
   } 
 ];
 
+function answerClick(){
+	$('.list-group-item').on('click', function(event){
+var question =	$(this).parent().data('id')
+	questions[question].answer = $(this).val();
+	$(this).siblings().removeClass('on-click');
 
-var selections = []; 
-var selected = $('.list-group-item').val();
-
-var currentQuestion = questions[0];
-userAnswer=  selected;
-breedsResults = currentQuestion.results[userAnswer];
-for(i in breedsResults){
-  breeds[i]++;
-  // console.log(breedsResults);
+	})
 }
 
-// function choose(){
-// 	selections.push(selected);
-// }
 
-console.log(selections);
+$(document).ready(function () { 
+
+	answerClick();
+
+	
+$('.submit').click(function(event){
+	questions.forEach(function (question){
+
+		var answer = question.answer;
+		var results = question.results;
+		var answerBreed = results[answer];
+		answerBreed.forEach(function(breed){
+			breeds[breed]++
+		})
+	})
+	console.log(breeds);
 
 
-$('.list-group-item').click(function(event){
-	event.preventDefault();
-	var selected = $('.list-group-item').val();
-	if (selected){
-		selections.push(selected);
+	max=0;
+	maxBreed=[];
+	for(breed in breeds){
+	  if(breeds[breed]>max){
+	    max=breeds[breed];
+	    maxBreed=[breed];
+	  }
+	  else if (breeds[breed] === maxBreed){
+	  		maxBreed.push(breed);
+	  }
 	}
+console.log(maxBreed);
+
+localStorage.userBreeds = JSON.stringify(maxBreed);
+window.location = "results-search.html"
+
+//var maxBreed = JSON.parse(localStorage.userBreeds);
+
+
+function displayResults(){
+	for (var i=0, i=maxBreed, i++) {
+		$(this).siblings().addClass('hidden')
+	}
+}
+
+
+
+
+
 })
 
 
+	
+
+$("button").click(function() {
+	    $('html,body').animate({
+	        scrollTop: $(this).siblings().offset().top},
+	        'slow');
+	});
+
+	
+
+
+	//at the end get the key that has the greatest value
+	
 
 
 
-function answerListInput(index){
-	var answerList = $('.list-group');
-	for (var i=0; i < questions[index].answers.length; i++){
-		var item = $('.list-group-item')
-		var input = i;
-		input += questions[index].answers[i];
-		item.append(input);
-		answerList.append(item);
-}
-return answerList;
-}
+
+	
 
 
+	  $('.list-group-item').click( function() {
+	    $(this).toggleClass('on-click') 
+	  } );
+	  
 
-    
-/*
-if(answer=="small"){
-  breeds['chiuauahua']++;
-   breeds['bull terrier']++;
- }
- else if(answer=="big"){
-      breeds['bulldog']++;
-   breeds['boxer']++;
- }*/
-
-
-//at the end get the key that has the greatest value
-max=0;
-maxBreed=null;
-for(breed in breeds){
-  if(breeds[breed]>max){
-    max=breeds[breed];
-    maxBreed=breed;
-  }
-}
-
-
-// function createResultsElement();
-
-
-// $("button").click(function() {
-//     $('html,body').animate({
-//         scrollTop: $('#next').offset().top},
-//         'slow');
-// });
-
-$( function() {
-  $('.list-group-item').click( function() {
-    $(this).css('background', '#f0ad4e')
-    $(this).css('color', 'white')
-  } );
-} );
 
 
 

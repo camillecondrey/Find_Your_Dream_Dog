@@ -9,177 +9,94 @@
 </head>
 <body>
 	<div class="nav">
-		<div class="home">Find Your Dream Dog!
-			<img class="logo" src="https://img.tineye.com/result/6b3508ebfb39bfbd04f1a755809cd03f010e1f23f18853e105405e3a7c89f030?size=160">
+		<div class="home">FYDD
+			<a href="index.html"><img class="logo" src="https://img.tineye.com/result/6b3508ebfb39bfbd04f1a755809cd03f010e1f23f18853e105405e3a7c89f030?size=160"></a>
 		</div>
-			<button type="button" class="btn btn-warning" id="donate"><a href="https://secure3.convio.net/nsala/site/Donation2;jsessionid=00000000.app311a?df_id=3080&3080.donation=form1&__utma=1.410414336.1487967819.1487967819.1487967819.1&__utmb=1.0.10.1487967819&__utmc=1&__utmx=-&__utmz=1.1487967819.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)&__utmv=-&__utmk=191524778&NONCE_TOKEN=89F9EA10AAE6A5EF20CB908EA3CE4FD4">Donate to the Cause!</a></button>
+			<button type="button" class="btn btn-warning" id="donate"><a href="https://secure3.convio.net/nsala/site/Donation2;jsessionid=00000000.app311a?df_id=3080&3080.donation=form1&__utma=1.410414336.1487967819.1487967819.1487967819.1&__utmb=1.0.10.1487967819&__utmc=1&__utmx=-&__utmz=1.1487967819.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)&__utmv=-&__utmk=191524778&NONCE_TOKEN=89F9EA10AAE6A5EF20CB908EA3CE4FD4" target="_blank">Donate to the Cause!</a></button>
+	</div>
+<div class="container1">
+	<div class="statement">
+<!-- 	We compared your results to the characteristics of the 16 
+	most common dog breeds found in animal shelters across the country: -->
+	<p class="statement-para">We compared your results to the characteristics of these 16 breeds, the most common found in shelters:</p>
 	</div>
 
-<div class="statement">
-	These results are 
-	if you would like to explore more than just the breed you matched with, select all breeds from the drop down. 
+
+	<div class="breed-list">
+		<div>
+			<div class="q4" id="q1">	
+				<ul>
+					<li class="li-1">American Pit Bull Terrier</li>
+					<li>Labrador Retriever</li>
+					<li>Chihuahua</li>
+					<li>Boxer</li>
+				</ul>
+			</div>	
+		
+			<div class="q4" id="q2">	
+				<ul>	
+					<li class="li-1">Beagle</li>
+					<li>Rottweiler</li>
+					<li>Dachshund</li> 
+					<li>German Shepherd</li> 
+				</ul>
+			</div>
+		</div>
+		<div>	
+			<div class="q4" id="q2">	
+				<ul>	
+					<li class="li-1">Australian Shepherd</li>
+					<li>Jack Russell Terrier</li>
+					<li>English Bulldog</li>
+					<li>Shih Tzu</li>
+				</ul>
+			</div>
+			<div class="q4" id="q1">	
+				<ul>	
+					<li class="li-1">Poodle</li> 
+					<li>Border Collie</li> 
+					<li>Yorkshire Terrier</li>
+					<li>Golden Retriever</li> 
+					
+				</ul>
+			</div>	
+		</div>	
+	</div>
+	<div class="instructions">Search for your match below or explore all 16 breeds<button class="btn btn-warning view-all">View All 16 Breeds</button></div>
 </div>
 
-<div class="results">
-	
-<!-- <div class="card mb-3 pit-bull">
-  <img class="card-img-top" style="width: 400px;" src="http://cdn1-www.dogtime.com/assets/uploads/gallery/pit-bull-dog-breed-pictures/pit-bull-dog-breed-picture-3.jpg" alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">American Pit Bull Terrier</h4>
-    <p class="card-text">The American Pit Bull Terrier is a companion and family dog breed. Originally bred to “bait” bulls, the breed evolved into all-around farm dogs, and later moved into the house to become “nanny dogs” because they were so gentle around children. Their tenacity, gameness, and courage make them popular competitors in the sports of weight pulling, agility, and obedience competition. These dogs love to snuggle and play and will be a loyal companion for life. 
-</p>
+<p class="label">Your Match(es): </p>
+<div class="match-results"></div>
+
+
+
+<p class="label2 hidden"></p>
+<div class="view-all-results"></div>
+
+<div class="search-container">
+<p class="start-search">Search Breeds by Location</p>
+
+<form class="search-div">
+		<label for="query"></label>
+			<input type="text" class="search breed-search" placeholder="Breed"></input>
+				<input type="text" class="search location-search" placeholder="zip code"></input>
+					<button type="submit" class="btn btn-warning submit"><img class="icon" src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png"></button>
+						
+</form>
+
+<div class="search-results"></div>
+
+
+
+<p>.</p>
 </div>
 
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Labrador Retriever</h4>
-    <p class="card-text">The Labrador Retriever was bred to be both a friendly companion and a useful working dog breed. Historically, he earned his keep as a fisherman’s helper: hauling nets, fetching ropes, and retrieving fish from the chilly North Atlantic. Today’s Labrador Retriever is as good-natured and hard working as his ancestors, and he’s America’s most popular breed. These days the Lab works as a retriever for hunters, assistance dog to the handicapped, show competitor, and search and rescue dog, among other canine jobs.
-</p>
+<div id="footer">
+	<p class="credit">Created by Camille Condrey</p>
+
+	<a href="https://github.com/camillecondrey" target="_blank" class="github"><img src="GitHub-Mark-32px.png"></a>
+	<a href="https://www.linkedin.com/in/camille-condrey-bb65568b/" target="_blank"><img src="In-White-34px-R.png"></a>
 </div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Chihuahua</h4>
-    <p class="card-text">The Chihuahua dog breed‘s charms include his small size, outsize personality, and variety in coat types and colors. He’s all dog, fully capable of competing in dog sports such as agility and obedience, and is among the top 10 watchdogs recommended by experts. He loves nothing more than being with his people and requires a minimum of grooming and exercise.
-</p>
-</div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Boxer</h4>
-    <p class="card-text">Boxers were originally bred to be medium-size guard dogs. Today, although they are a part of the AKC’s Working Group, they mostly find homes as loving family companions.
-</p>
-</div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">German Shepherd</h4>
-    <p class="card-text">The German Shepherd Dog is one of America’s most popular dog breeds — for good reason. He’s an intelligent and capable working dog. His devotion and courage are unmatched. And he’s amazingly versatile, excelling at most anything he’s trained to do: guide and assistance work for the handicapped, police and military service, herding, search and rescue, drug detection, competitive obedience and, last but not least, faithful companion.
-
-</p>
-</div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Beagle</h4>
-    <p class="card-text">Small, compact, and hardy, Beagles are active companions for kids and adults alike. Canines in this dog breed are merry and fun loving, but being hounds, they can also be stubborn and require patient, creative training techniques. Their noses guide them through life, and they’re never happier than when following an interesting scent. The Beagle originally was bred as a scenthound to track small game, mostly rabbits and hare. He is still used for this purpose in many countries, including the United States.
-</p>
-</div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Dachshund</h4>
-    <p class="card-text">Dachshunds are scent hound dog breeds who were bred to hunt badgers and other tunneling animals, rabbits, and foxes. Packs of Dachshunds were even used to trail wild boar. Today their versatility makes them excellent family companions, show dogs, and small-game hunters.
-</p>
-</div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Border Collie</h4>
-    <p class="card-text">The Border Collie dog breed was developed to gather and control sheep in the hilly border country between Scotland and England. He is known for his intense stare, or “eye,” with which he controls his flock. He’s a dog with unlimited energy, stamina, and working drive, all of which make him a premier herding dog; he’s still used today to herd sheep on farms and ranches around the world. The highly trainable and intelligent Border Collie also excels in various canine sports, including obedience, flyball, agility, tracking, and flying disc competitions.
-</p>
-</div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Jack Russell Terrier</h4>
-    <p class="card-text">Developed in England some 200 years ago to hunt foxes, the Jack Russell Terrier, also known as the Parson Russell Terrier, is a lively, independent, and clever little dog. He’s charming and affectionate, but he’s also a handful to train and manage. For experienced dog owners only!
-
-</p>
-</div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Australian Shepherd</h4>
-    <p class="card-text">Despite his name, the Australian Shepherd originated in the western U.S., not Australia, around the time of the Gold Rush in the 1840s. Originally bred to herd livestock, he remains a working dog breed at heart; the Aussie, as he’s nicknamed, is happiest when he has a job to do. He can be a wonderful family companion if his intelligence and energy are channeled into dog sports or activities.
-
-</p>
-</div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Shih Tzu</h4>
-    <p class="card-text">His name means little lion, but there’s nothing fierce about this dog breed. The Shih Tzu is a lover, not a hunter. Bred solely to be a companion, the Shih Tzu is an affectionate, happy, outgoing housedog who loves nothing more than to follow his people from room to room. In recent years, however, owners have started taking the Shih Tzu off their laps and into dog sports, training him for obedience, rally, and agility competitions.
-
-</p>
-</div>
-
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Rottweiler</h4>
-    <p class="card-text">Rottweilers were originally dogs bred to drive cattle to market. Later they were used to pull carts for butchers. They were among the earliest police dogs and serve with honor in the military. Most important, they are popular family guardians and friends.
-
-</p>
-</div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Golden Retriever</h4>
-    <p class="card-text">The Golden Retriever is one of the most popular dog breeds in the U.S. The breed’s friendly, tolerant attitude makes him a fabulous family pet, and his intelligence makes him a highly capable working dog. Golden Retrievers excel at retrieving game for hunters, tracking, sniffing out drugs, and as therapy and assistance dogs. They’re also natural athletes, and do well in dog sports such as agility and competitive obedience.
-
-</p>
-</div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Yorkshire Terrier</h4>
-    <p class="card-text">Small in size but big in personality, the Yorkshire Terrier makes a feisty but loving companion. The most popular toy dog breed in the U.S., the “Yorkie” has won many fans with his devotion to his owners, his elegant looks, and his suitability to apartment living.
-
-</p>
-</div>
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">Poodle</h4>
-    <p class="card-text">Elegant. Proud. Clever. Poodles are impressive dogs, as the many best-in-show winners from this dog breed can attest. Behind the blue ribbons, impressive hairdos, and regal attitude, you’ll find an affectionate family dog with an ancient history and many talents.
-
-</p>
-</div>
-
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">American Bulldog</h4>
-    <p class="card-text">It may have its roots in fighting and working, but the American Bulldog is a big old softie at heart. Now, you’ll find him as a much-loved companion in many households in North American and around the world. He’ll keep a watchful eye over the family and work his tail off all day, but he’s just as content to curl up at your feet on the couch.
-	If you’ve got enough energy to keep up with this active breed, as well as enough attention to give, the American Bulldog may be the perfect fit for your family.
-
-
-</p>
-</div>
-
-
-<div class="card mb-3">
-  <img class="card-img-top" src="..." alt="Card image cap">
-  <div class="card-block">
-    <h4 class="card-title">English Bulldog</h4>
-    <p class="card-text">Bulldogs originally were used to drive cattle to market and to compete in a bloody sport called bullbaiting. Today, they’re gentle companions who love kids. A brief walk and a nap on the sofa is just this dog breed‘s speed.
-
-</p>
-</div> -->
-
-
-    
-  </div>
-
-
-
-
 
 
 

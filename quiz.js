@@ -10,8 +10,7 @@ var breeds={
  	'Boxer': 0, 
  	'German Shepherd': 0, 
  	'Beagle': 0, 
- 	'Dachshund': 0, 
- 	'American Bulldog': 0, 
+ 	'Dachshund': 0,  
  	'Border Collie': 0, 
  	'Jack Russell Terrier': 0, 
  	'Australian Shepherd': 0, 
@@ -35,7 +34,7 @@ var questions = [
     		   "Any Size": ["Chihuahua",'Dachshund', "English Bulldog", "Jack Russell Terrier", "Shih Tzu", 
     		   				"Yorkshire Terrier", 'Beagle','Labrador Retriever', 'Australian Shepherd', 'Border Collie', 
     		   				'American Pit Bull Terrier', 'Boxer', 'Golden Retriever', 'Poodle', 'German Shepherd', 
-    		   				"Rottweiler", "American Bulldog"]}
+    		   				"Rottweiler"]}
   },
   {
     question: "Do you have dog allergies?", 
@@ -43,19 +42,19 @@ var questions = [
     results: { "Yes":["Poodle",'Yorkshire Terrier', "Shih Tsu", "Jack Russell Terrier"], 
     		   "No": ["Chihuahua",'Dachshund', "English Bulldog", "Jack Russell Terrier", "Shih Tzu", 
     		   				"Yorkshire Terrier", 'Beagle','Labrador Retriever', 'Australian Shepherd', 'Border Collie', 
-    		   				'American Pit Bull Terrier', 'Boxer', 'Golden Retriever', 'Poodle', 'German Shepherd', 
+    		   				'American Pit Bull Terrier', 'Boxer', 'Golden Retriever', 'German Shepherd', 
     		   				"Rottweiler", "American Bulldog"], 
     		   "I don't know": ["Chihuahua",'Dachshund', "English Bulldog", "Jack Russell Terrier", "Shih Tzu", 
     		   				"Yorkshire Terrier", 'Beagle','Labrador Retriever', 'Australian Shepherd', 'Border Collie', 
-    		   				'American Pit Bull Terrier', 'Boxer', 'Golden Retriever', 'Poodle', 'German Shepherd', 
-    		   				"Rottweiler", "American Bulldog"]}
+    		   				'American Pit Bull Terrier', 'Boxer', 'Golden Retriever','German Shepherd', 
+    		   				"Rottweiler"]}
   },
   {
   	question: "How much do you exercise", 
     answers: ["Frequently","Occasionally", "Hardly Ever"], 
     results: { "Frequently":["American Pit Bull Terrier",'Labrador Retriever', "Boxer", "German Shepherd", "Rottweiler",
     						"Golden Retriever", "Border Collie", "Australian Shepherd"], 
-    			"Occasionally": ['Poodle','Beagle', "American Bulldog", "Jack Russell", "Golden Retriever", "American Pit Bull Terrier", "Boxer"],
+    			"Occasionally": ['Poodle','Beagle', "Jack Russell", "Golden Retriever", "American Pit Bull Terrier", "Boxer"],
     			"Hardly Ever": ["English Bulldog", "Shih Tsu", "Dachshund", "Chihuahua", "Yorkshire Terrier"]} 
   }, 
   {
@@ -66,7 +65,7 @@ var questions = [
     		   				'American Pit Bull Terrier', 'Boxer', 'Golden Retriever', 'Poodle', 'German Shepherd', 
     		   				"Rottweiler", "American Bulldog"],
     		   	"No": ["Shih Tsu", "Yorkshire Terrier", "English Bulldog", "Poodle", "Chihuahua", "Dachshund", 
-    		   			"American Bulldog", "Jack Russell Terrier", "Beagle"]}		
+    		   			 "Jack Russell Terrier", "Beagle"]}		
   } ,
   {
   	question: 'Are you planning to bring a new baby into your home within the next few years?', 
@@ -76,7 +75,7 @@ var questions = [
     			"No": ["Chihuahua",'Dachshund', "English Bulldog", "Jack Russell Terrier", "Shih Tzu", 
     		   				"Yorkshire Terrier", 'Beagle','Labrador Retriever', 'Australian Shepherd', 'Border Collie', 
     		   				'American Pit Bull Terrier', 'Boxer', 'Golden Retriever', 'Poodle', 'German Shepherd', 
-    		   				"Rottweiler", "American Bulldog"] }
+    		   				"Rottweiler"] }
   }, 
   {
   	question: 'What is your fur tolerance?', 
@@ -87,14 +86,26 @@ var questions = [
     		   					"Rottweiler", "American Bulldog"],
     		   	"Cannot stand it": ["Poodle", "Shih Tsu", "Chihuahua", "Yorkshire Terrier", "Jack Russell Terrier", "Boxer"],
     		   	"A little fur is okay": ["American Pit Bull Terrier", "Beagle", "Poodle", "Boxer", "Shih Tsu", 
-    		   						"Chihuahua", "Yorkshire Terrier", "Jack Russell Terrier", "English Bulldog", "American Bulldog"]}			
+    		   						"Chihuahua", "Yorkshire Terrier", "Jack Russell Terrier", "English Bulldog"]}			
   } 
 ];
+
+	 
+
 
 function answerClick(){
 	$('.list-group-item').on('click', function(event){
 var question =	$(this).parent().data('id')
-	questions[question].answer = $(this).val();
+	$(this).toggleClass('on-click')
+	if ($(this).hasClass("on-click")){
+		questions[question].answer = $(this).val();
+	}
+
+	else {
+		questions[question].answer = null
+	}
+
+	
 	$(this).siblings().removeClass('on-click');
 
 	})
@@ -105,11 +116,26 @@ $(document).ready(function () {
 
 	answerClick();
 
+
 	
 $('.submit').click(function(event){
+
+	var validate = true;
+
 	questions.forEach(function (question){
 
+		if (!validate) {
+			return 
+		}
+
 		var answer = question.answer;
+
+		if (!answer) {
+			validate = false;
+			alert("Please make a selection for each question");
+			return
+		}
+
 		var results = question.results;
 		var answerBreed = results[answer];
 		answerBreed.forEach(function(breed){
@@ -117,20 +143,23 @@ $('.submit').click(function(event){
 		})
 	})
 	console.log(breeds);
+	if (!validate){
+		return
+	}
 
 
 	max=0;
 	maxBreed=[];
 	for(breed in breeds){
-	  if(breeds[breed]>max){
+	  if(breeds[breed] > max){
 	    max=breeds[breed];
 	    maxBreed=[breed];
 	  }
-	  else if (breeds[breed] === maxBreed){
+	  else if (breeds[breed] === max){
 	  		maxBreed.push(breed);
 	  }
 	}
-console.log(maxBreed);
+// console.log(maxBreed);
 
 localStorage.userBreeds = JSON.stringify(maxBreed);
 window.location = "results-search.html"
@@ -138,11 +167,7 @@ window.location = "results-search.html"
 //var maxBreed = JSON.parse(localStorage.userBreeds);
 
 
-function displayResults(){
-	for (var i=0, i=maxBreed, i++) {
-		$(this).siblings().addClass('hidden')
-	}
-}
+
 
 
 
@@ -171,9 +196,6 @@ $("button").click(function() {
 	
 
 
-	  $('.list-group-item').click( function() {
-	    $(this).toggleClass('on-click') 
-	  } );
 	  
 
 

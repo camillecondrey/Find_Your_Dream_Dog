@@ -16,7 +16,7 @@ var getResults = function(breed, location){
 	else {
 		$.getJSON('http://api.petfinder.com/pet.find?format=json&key=30d8e0bee7deacf6bd7a5316af670880&callback=?'
 		 + '&location=' + location + '&breed=' + breed, function(json){
-		 	console.log(json);
+		 	// console.log(json);
 			if (json.petfinder.pets){
 				displayResults(json.petfinder.pets.pet)
 				// $('.results').html('<h2>Results:</h2>' + json.pet.find)
@@ -33,25 +33,26 @@ var getResults = function(breed, location){
 function displayResults(items){
 	var html = ""; 
 	$.each(items, function(index, item){
-		var image = 'http://r.ddmcdn.com/s_f/o_1/cx_633/cy_0/cw_1725/ch_1725/w_720/APL/uploads/2014/11/too-cute-doggone-it-video-playlist.jpg'
+		var image = 'https://www.sweetdreamsquiltstudio.com/images/lab%20dog%20outline%20001.jpg'
 		if (item.media.photos) {
-			image = item.media.photos.photo[0].$t
+			image = item.media.photos.photo[2].$t
 		}
 
-		console.log(item);
+		// console.log(item);
 		html += 
-		`<div class="card" style="width: 20rem;">
-  		<img class="card-img-top" style="width: 318px; height: 45px;" src="${image}" alt="Card image cap">
-  		<div class="card-block">
-    	<h4 class="card-title">${item.name.$t}</h4>
-    	<ul class="card-text">
-    		<li>Breed: ${item.breeds.breed.$t}</li>
-    		<li>Age: ${item.age.$t}</li>
-    		<li>Sex: ${item.sex.$t}</li>
-    	</ul>
-    	<a href="#" class="btn btn-primary">Go somewhere</a>
-    	</div>
-		</div>`
+		`<div class="col-4"> <div class="card dog-card" style="width: 20rem;">
+  				<img class="card-img-top" size="pn" src="${image}" alt="Card image cap">
+  				<div class="card-block">
+    			<h4 class="card-title">${item.name.$t}</h4>
+    			<ul class="card-text">
+    				<li>Breed: ${item.breeds.breed.$t}</li>
+    				<li>Age: ${item.age.$t}</li>
+    				<li>Sex: ${item.sex.$t}</li>
+    				<li>Location: <br>${item.contact.city.$t} ${item.contact.state.$t} ${item.contact.zip.$t} <br>${item.contact.phone.$t}</li>
+    			</ul>
+    			<a href="http://www.petfinder.com/shelters/${item.shelterId.$t}.html" target="_blank" id="shelter-btn" class="btn btn-primary">Go to Shelter Site</a>
+    			</div>
+		</div></div>`
 	})
 
 	$('.results').html(html);
@@ -61,5 +62,11 @@ $('.search-div').submit(function(event){
 	event.preventDefault();
 	getResults($('.search').val(), null);
 });
+
+$(".submit").click(function() {
+	    $('html,body').animate({
+	        scrollTop: $('.results').offset().top},
+	        'slow');
+	});
 
 });

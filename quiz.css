@@ -10,11 +10,16 @@
 	background-color: #ededed;
 	box-shadow: 0 1px 1px rgba(173,168,168,.1);
     border: 1px solid rgba(0,0,0,.1);
+
+}
+
+body {
+	background-color: #fae6c9;
 }
 
 .logo {
-	width: 35px; 
-	height: 35px;
+	width: 30px; 
+	height: 30px;
 	margin-left: 10px;
 }
 
@@ -38,17 +43,34 @@ button > a {
 	color: white;
 }
 
+a:visited {
+	text-decoration: none;
+	color: white;
+}
+
+a:hover {
+	text-decoration: none !important;
+	color: #ededed !important;
+
+}
+
 .home {
 	margin-top: auto;
 	margin-bottom: auto;
 	margin-left: 20px;
 	font-size: 25px;
 	color: #3D3D3D;
+	margin-top: 10px !important;
 }
 
+
+
 .list-group-item {
-	width: 400px;
+	width: 700px;
 	font-family: 'Poppins', sans-serif;
+	text-align: center;
+	margin: 0 auto;
+	display: block;
 }
 
 button:hover {
@@ -58,11 +80,18 @@ button:hover {
 
 button {
 	font-family: 'Poppins', sans-serif;
+	text-align: center;
 }
 
 .container > p {
 	margin-top: 40px;
 	font-size: 20px;
+}
+
+.container {
+	text-align: center;
+	margin-left: 0px;
+	margin-right: 0px;
 }
 
 .on-click {
@@ -73,10 +102,88 @@ button {
 .submit {
 	margin:0 auto;
 	display: block;
-	margin-top: 65px;
-	margin-bottom: 15px;
+	margin-top: 40px;
+	margin-bottom: 100px;
 	width: 170px;
 	height: 50px;
 	font-size: 20px;
 	font-family: 'Poppins', sans-serif;
 }
+
+.card-img-top {
+	width: 700px;
+}
+
+#footer {
+   /*position:fixed;*/
+   left:0px;
+   bottom:0px;
+   height:160px;
+   width:100% !important;
+   background:#999;
+
+}
+
+.github {
+	margin-left: 100px;
+	margin-right: 40px;
+
+}
+
+.credit {
+	margin-left: 100px;
+	padding-top: 40px;
+}
+
+.question1 {
+	position: absolute;
+	top: 10px;
+	left: 0;
+	width: 100%;
+	margin-left: 40px;
+	margin-right: 10px;
+	/*text-align: left;*/
+
+
+}
+
+
+.question1 span {
+	color: #f0ad4e !important;
+	
+	background: rgb(0, 0, 0);
+	background: rgba(0, 0, 0, 0.7);
+	padding: 10px;
+	line-height: 52px;
+	font-size: 20px;
+
+}
+
+.spacer {
+   padding:0 5px;
+}
+
+.image-container {
+	position: relative;
+	margin-top: 50px;
+	margin-bottom: 50px;
+	/*width: 700px;*/
+}
+
+.q1 {
+	margin-right: 400px;
+	font-size: 20px;
+}
+
+.q3 {
+	margin-right: 400px;
+}
+
+.q6 {
+	margin-left: 100px;
+}
+
+.q4 {
+	margin-right: 150px;
+}
+

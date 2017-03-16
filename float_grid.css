@@ -1,3 +1,10 @@
+#footer {
+	flex: 1 100%;
+}
+
+
+
+
 .row {
   max-width: 1000px;
   padding-left: 20px;

@@ -253,7 +253,7 @@ $(document).ready(function () {
 			$('.search-results').html("<h2>Enter your zip code to find dogs near you!</h2>")
 		}
 		else {
-			$.getJSON('http://api.petfinder.com/pet.find?format=json&key=30d8e0bee7deacf6bd7a5316af670880&callback=?'
+			$.getJSON('https://api.petfinder.com/pet.find?format=json&key=30d8e0bee7deacf6bd7a5316af670880&callback=?'
 			 + '&location=' + location + '&breed=' + breed, function(json){
 			 	
 			 	// console.log(json);
@@ -291,7 +291,7 @@ $(document).ready(function () {
 	    				<li><strong>Sex:</strong> ${item.sex.$t}</li>
 	    				<li>Location:<br>${item.contact.city.$t} ${item.contact.state.$t} ${item.contact.zip.$t} <br>${item.contact.phone.$t}</li>
 	    			</ul>
-	    			<a href="http://www.petfinder.com/shelters/${item.shelterId.$t}.html" target="_blank" id="shelter-btn" class="btn btn-primary">Go to Shelter Site</a>
+	    			<a href="https://www.petfinder.com/shelters/${item.shelterId.$t}.html" target="_blank" id="shelter-btn" class="btn btn-primary">Go to Shelter Site</a>
 	    			</div>
 			</div></div>`
 		})

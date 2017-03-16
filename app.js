@@ -50,7 +50,7 @@ function displayResults(items){
     				<li>Sex: ${item.sex.$t}</li>
     				<li>Location: <br>${item.contact.city.$t} ${item.contact.state.$t} ${item.contact.zip.$t} <br>${item.contact.phone.$t}</li>
     			</ul>
-    			<a href="http://www.petfinder.com/shelters/${item.shelterId.$t}.html" target="_blank" id="shelter-btn" class="btn btn-primary">Go to Shelter Site</a>
+    			<a href="https://www.petfinder.com/shelters/${item.shelterId.$t}.html" target="_blank" id="shelter-btn" class="btn btn-primary">Go to Shelter Site</a>
     			</div>
 		</div></div>`
 	})

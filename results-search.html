@@ -1,85 +1,58 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>FYDD</title>
+	<title>Find your dream dog results</title>
 	<link rel="stylesheet" type="text/css" href="results-search.css">	
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css?family=Poppins:300|Roboto+Slab:300" rel="stylesheet">
 <link rel="stylesheet" type="text/css" href="float_grid.css">
+<link rel="icon" type="image/png" href="https://img.tineye.com/result/6b3508ebfb39bfbd04f1a755809cd03f010e1f23f18853e105405e3a7c89f030?size=160"/>
 </head>
+
 <body>
-	<div class="nav">
-		<div class="home">FYDD
-			<a href="index.html"><img class="logo" src="https://img.tineye.com/result/6b3508ebfb39bfbd04f1a755809cd03f010e1f23f18853e105405e3a7c89f030?size=160"></a>
-		</div>
-			<button type="button" class="btn btn-warning" id="donate"><a href="https://secure3.convio.net/nsala/site/Donation2;jsessionid=00000000.app311a?df_id=3080&3080.donation=form1&__utma=1.410414336.1487967819.1487967819.1487967819.1&__utmb=1.0.10.1487967819&__utmc=1&__utmx=-&__utmz=1.1487967819.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)&__utmv=-&__utmk=191524778&NONCE_TOKEN=89F9EA10AAE6A5EF20CB908EA3CE4FD4" target="_blank">Donate to the Cause!</a></button>
-	</div>
-<div class="container1">
-	<div class="statement">
-<!-- 	We compared your results to the characteristics of the 16 
-	most common dog breeds found in animal shelters across the country: -->
-	<p class="statement-para">We compared your results to the characteristics of these 16 breeds, the most common found in shelters:</p>
-	</div>
-
-
-	<div class="breed-list">
-		<div>
-			<div class="q4" id="q1">	
-				<ul>
-					<li class="li-1">American Pit Bull Terrier</li>
-					<li>Labrador Retriever</li>
-					<li>Chihuahua</li>
-					<li>Boxer</li>
-				</ul>
-			</div>	
+	<nav class="nav">
 		
-			<div class="q4" id="q2">	
-				<ul>	
-					<li class="li-1">Beagle</li>
-					<li>Rottweiler</li>
-					<li>Dachshund</li> 
-					<li>German Shepherd</li> 
-				</ul>
-			</div>
+		<div class="home">fydd
+			<a href="index.html">
+				<img class="logo" src="https://img.tineye.com/result/6b3508ebfb39bfbd04f1a755809cd03f010e1f23f18853e105405e3a7c89f030?size=160">
+			</a>
 		</div>
-		<div>	
-			<div class="q4" id="q2">	
-				<ul>	
-					<li class="li-1">Australian Shepherd</li>
-					<li>Jack Russell Terrier</li>
-					<li>English Bulldog</li>
-					<li>Shih Tzu</li>
-				</ul>
-			</div>
-			<div class="q4" id="q1">	
-				<ul>	
-					<li class="li-1">Poodle</li> 
-					<li>Border Collie</li> 
-					<li>Yorkshire Terrier</li>
-					<li>Golden Retriever</li> 
-					
-				</ul>
-			</div>	
-		</div>	
-	</div>
-	<div class="instructions">Search for your match below or explore all 16 breeds<button class="btn btn-warning view-all">View All 16 Breeds</button></div>
-</div>
+			
+			<button type="button" class="btn btn-warning" id="donate">
+				<a href="https://secure3.convio.net/nsala/site/Donation2;jsessionid=00000000.app311a?df_id=3080&3080.donation=form1&__utma=1.410414336.1487967819.1487967819.1487967819.1&__utmb=1.0.10.1487967819&__utmc=1&__utmx=-&__utmz=1.1487967819.1.1.utmcsr=google|utmccn=(organic)|utmcmd=organic|utmctr=(not%20provided)&__utmv=-&__utmk=191524778&NONCE_TOKEN=89F9EA10AAE6A5EF20CB908EA3CE4FD4" target="_blank">Donate to the Cause!</a>
+			</button>
+	
+	</nav>
+
+	<div class="container1">
+
+		<p class="statement">We compared your results to the characteristics of the 16 most common dog breeds found in shelters.</p>
+		<p>Search for your match(es) below or explore all 16 breeds.</p>
+		<button class="btn btn-warning view-all">View All 16 Breeds</button>
+	</div>	
+
+	
+
+
 
 <p class="label">Your Match(es): </p>
+
 <div class="match-results"></div>
 
 
 
 <p class="label2 hidden"></p>
+
 <div class="view-all-results"></div>
 
 <div class="search-container">
+
 <p class="start-search">Search Breeds by Location</p>
 
 <form class="search-div">
 		<label for="query"></label>
 			<input type="text" class="search breed-search" placeholder="Breed"></input>
-				<input type="text" class="search location-search" placeholder="zip code"></input>
+				<input type="text" class="search location-search" placeholder="city, state or zip code"></input>
 					<button type="submit" class="btn btn-warning submit"><img class="icon" src="https://cdn1.iconfinder.com/data/icons/hawcons/32/698956-icon-111-search-128.png"></button>
 						
 </form>
@@ -88,15 +61,20 @@
 
 
 
-<p>.</p>
+
 </div>
 
-<div id="footer">
+<footer id="footer">
 	<p class="credit">Created by Camille Condrey</p>
 
-	<a href="https://github.com/camillecondrey" target="_blank" class="github"><img src="GitHub-Mark-32px.png"></a>
-	<a href="https://www.linkedin.com/in/camille-condrey-bb65568b/" target="_blank"><img src="In-White-34px-R.png"></a>
-</div>
+	<a href="https://github.com/camillecondrey" target="_blank" class="link">
+		<img src="GitHub-Mark-32px.png">
+	</a>
+	
+	<a href="https://www.linkedin.com/in/camille-condrey-bb65568b/" target="_blank" class="link">
+		<img src="In-White-34px-R.png">
+	</a>
+</footer>
 
 
 

@@ -7,17 +7,16 @@ body {
 	background-color: #fae6c9;
 }
 
-
-
 .nav {
-	height: 65px;
-	/*display: block;*/
+	height: 70px;
+	display: flex;
 	margin-top: 0;
 	background-color: #ededed;
 	box-shadow: 0 1px 1px rgba(173,168,168,.1);
     border: 1px solid rgba(0,0,0,.1);
     display: flex;
     width: 100%;
+    min-width: 1000px;
 
 }
 
@@ -28,6 +27,7 @@ body {
 	font-size: 25px;
 	color: #3D3D3D;
 	margin-top: 10px;
+	padding-top: 5px;
 }
 
 .logo {
@@ -55,13 +55,15 @@ button > a {
 
 .container1 {
 	display: flex;
-	flex-direction: row;
-	/*flex-wrap: wrap;*/ 
-	background-color: #f0ad4e;
-	width: 100%
+	flex-direction: column;
+	background-image: linear-gradient(to right, #fae6c9, #f3bd71);
+	width: 100%;
+	min-width: 1000px;
+	justify-content: center;
+	text-align: center;
+	color: #696969;
+
 }
-
-
 
 .search {
 	display: inline-block;
@@ -75,10 +77,6 @@ button > a {
     border-radius: 3px;
 }
 
-.breed-search {
-    /*margin-left: 370px; */ 
-}
-
 .search-div {
 	font-size: 0;
 	margin-top: 50px;
@@ -89,127 +87,50 @@ button > a {
 	align-items: center;
 }
 
-ul {
-	/*display: inline-block;*/
-	list-style: none;
-	text-align: center;
-	font-size: 15px;
-	padding: 0px;
-	margin: 0px;
 
-}
-
-.q4 {
-	border: 1px solid;
-	width: 200px;
-	height: 130px;
-	color: #696969;
-	border-radius: 10px;
-
-}
-
-#q1 {
-	background-color: #f3bd71;
-	border: 1px solid #f3bd71;
-}
-
-#q2 {
-	background-color: #f7d6a6;
-	border: 1px solid #f7d6a6;
-}
-
-
-
-.li-1 {
-	margin-top: 20px;
-}
 
 .statement {
-
-	font-size:20px;
-	/*flex-shrink: 1;*/
-	width:400px;
-	background-color: #fae6c9;
-	padding: 55px;
-	color: #696969;
-	text-align: right;
-	border-radius: 50px 5px 50px;
-	margin-left: 15px;
-	margin-right: 15px;
-	border: 1px solid #fae6c9;
-	height: 260px;
-	margin-left: 65px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	/*display: flex;*/
-	margin: auto;
+	margin-top: 30px;
+	font-size: 20px;
+	margin-right: 30px;
+	margin-left: 30px;
 }
 
-.instructions {
-	/*display: flex;*/
-	flex-shrink: 1;
-	border: 1px solid #fae6c9;
-	border-radius: 5px 50px 5px;
-	font-size:20px;
-	display: inline-block;
-	width: 400px;
-	background-color: #fae6c9;
-	padding: 70px;
-	height: 260px;
-	color: #696969;
-	margin-left: 15px;
-	margin-right: 15px;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	margin: auto;
 
-
-}
 
 .view-all {
-	justify-content: flex-end;
+	
 	margin:0 auto;
-	width: 200px;
+	width: 170px;
 	height: 45px;
-	font-size: 18px;
+	font-size: 15px;
 	font-family: 'Poppins', sans-serif;
-	float: right;
+	
 	margin-top: 20px;
-	/*margin-bottom: auto;*/
 	margin-right: 0px;
-	margin-bottom: 10px;
+	margin-bottom: 40px !important;
+	text-align: center;
+	margin: auto;
 
 }
 
 .breed-list {
-	/*text-align: center;
-	margin-bottom: 40px;
-	display: inline-block;
-	float: right;*/
 	width: 400px;
 	height: 260px;
-	
 	display: flex;
 	flex-direction: row;
-	/*flex-wrap: wrap;*/
 	flex-flow: flex-wrap;
-	/*background-color: #f7d6a6;*/
 	margin-top: 10px;
 	margin-bottom: 10px;
-	/*flex-shrink: 1;*/
 }
 
 .card {
-	/*width: 400px !important;*/
-	/*margin-left: 40px;*/
 	display: inline-block !important;
 	vertical-align: top;
-	/*margin-right: 40px;*/
 	margin-top: 30px;
 }
 
 .dog-card {
-	
 	margin-right: 40px;
 	margin-top: 40px;
 }
@@ -223,6 +144,7 @@ ul {
 .card-text {
 	list-style: none;
 	text-align: left;
+	padding-left: 0px;
 }
 .start-search {
 	margin-right: auto;
@@ -235,7 +157,6 @@ ul {
 }
 
 .match-results {
-	/*display: inline-block;*/
 	margin-left: 40px;
 	display: flex;
 	flex-direction: row;
@@ -244,7 +165,6 @@ ul {
 }
 
 .submit {
-	/*position: absolute;*/
 	height: 80px;
 	width: 80px;
 	background-color: #f0ad4e;
@@ -252,10 +172,6 @@ ul {
 
 }
 
-#chihuahua {
-	height: 270px;
-	width: 400px;
-}
 
 .mb-3 {
 	display: inline-block !important;
@@ -263,91 +179,14 @@ ul {
 }
 
 .breeds {
-	/*display: inline-block !important;*/
-	/*margin-left: 190px;*/
-	/*margin-left: 20px;
-	margin-right: 20px;*/
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
-	/*margin-left: 40px;*/
-
 }
 
-#english {
-	width: 400px;
-	height: 270px;
-}
-
-#german {
-	width: 400px;
-	height: 270px;
-}
-
-#golden {
-	width: 400px;
-	height: 270px;
-}
-
-#lab {
-	width: 400px;
-	height: 270px;
-}
-
-#boxer {
-	width: 400px;
-	height: 270px;
-}
-
-#beagle {
-	width: 400px;
-	height: 270px;
-}
-
-#dachshund {
-	width: 400px;
-	height: 270px;
-}
-
-#border {
-	width: 400px;
-	height: 270px;
-}
-
-#aussie {
-	width: 400px;
-	height: 270px;
-}
-
-#yorkshire{
-	width: 400px;
-	height: 270px;
-}
-
-#poodle {
-	width: 400px;
-	height: 270px;
-}
-
-#shihtzu {
-	width: 400px;
-	height: 270px;
-}
-
-#jack {
-	width: 400px;
-	height: 270px;
-}
-
-#rottweiler {
-	width: 400px;
-	height: 270px;
-}
 
 .label {
-	/*margin-left: 40px;*/
-	/*margin-top: 40px;*/
 	font-size: 25px;
 	background-color: #ededed;
     margin-left: 0px !important;
@@ -356,6 +195,7 @@ ul {
    	height: 70px;
    	padding-top: 15px;
    	width: 100%;
+   	min-width: 1000px;
 }
 
 #shelter-btn {
@@ -372,42 +212,46 @@ ul {
 .search-container {
 	background-color: #ededed;
 	height: 100%;
-
-	
+	min-width: 1000px;	
 }
 
 .card .mb-3 {
 	margin-left: 10px;
 }
 
-#pitbull {
-	height: 270px;
-}
 
 #footer {
-   /*position:fixed;*/
+
    left:0px;
    bottom:0px;
-   height:160px;
+   height:100px;
    width:100%;
    background:#999;
 
+
+
 }
 
-.github {
-	margin-left: 100px;
-	margin-right: 40px;
+.link {
+	margin-left: 20px;
+	margin-right: 20px;
+	position: relative;
+	bottom: 10px;
+	display: inline-block;
 
 }
 
 .credit {
 	margin-left: 100px;
-	padding-top: 40px;
+	padding-top: 50px;
+	font-weight: 700;
+	position: relative;
+	bottom: 10px;
+	display: inline-block;
+
 }
 
 .view-all-results {
-	/*margin-right: 30px;
-	margin-left: 30px;*/
 	display: flex;
 	flex-direction: row;
 	flex-wrap: wrap;
@@ -418,12 +262,10 @@ ul {
 
 h2 {
 	text-align: center;
+	margin-bottom: 100px;
 }
 
-.statement-para {
-	flex-shrink: 5;
-	display: flex;
-}
+
 
 .label2 {
 	font-size: 25px;
@@ -434,6 +276,7 @@ h2 {
    	height: 70px;
    	padding-top: 15px;
    	width: 100%;
+   	min-width: 1000px;
 }
 
 .hidden {
@@ -455,4 +298,10 @@ a:hover {
 	flex-direction: row;
 	flex-wrap: wrap;
 	justify-content: space-around;
+	margin-bottom: 100px;
+}
+
+#dog {
+	width: 400px !important;
+	height: 270px !important;
 }

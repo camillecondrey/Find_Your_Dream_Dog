@@ -1,0 +1,39 @@
+* {
+	box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+
+.nav {
+	height: 65px;
+	display: block;
+	margin-top: 0;
+	background-color: #ededed;
+	box-shadow: 0 1px 1px rgba(173,168,168,.1);
+    border: 1px solid rgba(0,0,0,.1);
+}
+
+.logo {
+	width: 35px; 
+	height: 35px;
+	margin-left: 10px;
+}
+
+#donate {
+	margin:0 auto;
+	/*display: block;*/
+	/*margin-top: 65px;
+	margin-bottom: 15px;*/
+	width: 240px;
+	height: 45px;
+	font-size: 18px;
+	font-family: 'Poppins', sans-serif;
+	float: right;
+	margin-top: auto;
+	margin-bottom: auto;
+	margin-right: 20px;
+}
+
+button > a {
+	text-decoration: none;
+	color: white;
+}

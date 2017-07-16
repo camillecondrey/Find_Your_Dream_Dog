@@ -1,6 +1,4 @@
-//will be using pet.find with arguments breed, size, animal, location, age
-//will be using shelter.listByBreed with arguments breed
-//will be using shelter.find with arguments location
+
 $(document).ready(function(){
 
 // var petFinder_base_url = 'http://api.petfinder.com/subsystem.method';
@@ -11,10 +9,10 @@ var getResults = function(breed, location){
 	var location = $('.location-search').val();
 	//check if user has entered anything
 	if (location == ''){
-		$('.results').html("<h2>Enter your location to find the closest shelter!</h2>")
+		$('.results').html("<h3>Enter your zip code to search local shelters</h3>")
 	}
 	else {
-		$.getJSON('http://api.petfinder.com/pet.find?format=json&key=30d8e0bee7deacf6bd7a5316af670880&callback=?'
+		$.getJSON('https://api.petfinder.com/pet.find?format=json&key=30d8e0bee7deacf6bd7a5316af670880&callback=?'
 		 + '&location=' + location + '&breed=' + breed, function(json){
 		 	// console.log(json);
 			if (json.petfinder.pets){
@@ -23,7 +21,7 @@ var getResults = function(breed, location){
 				// console.log(json);
 			}
 			else {
-				$('.results').html('<h2>No matches for this criteria. Try expanding your search distance</h2>')
+				$('.results').html('<h3>No matches for this criteria. Try another search</h3>')
 			}
 		})
 	}
@@ -40,7 +38,7 @@ function displayResults(items){
 
 		// console.log(item);
 		html += 
-		`<div class="col-4"> <div class="card dog-card" style="width: 20rem;">
+		`<div> <div class="card dog-card" style="width: 20rem;">
   				<img class="card-img-top" size="pn" src="${image}" alt="Card image cap">
   				<div class="card-block">
     			<h4 class="card-title">${item.name.$t}</h4>
@@ -48,7 +46,8 @@ function displayResults(items){
     				<li>Breed: ${item.breeds.breed.$t}</li>
     				<li>Age: ${item.age.$t}</li>
     				<li>Sex: ${item.sex.$t}</li>
-    				<li>Location: <br>${item.contact.city.$t} ${item.contact.state.$t} ${item.contact.zip.$t} <br>${item.contact.phone.$t}</li>
+    				<li>Location: ${item.contact.city.$t}, ${item.contact.state.$t} ${item.contact.zip.$t} </li>
+    				<li>Phone: ${item.contact.phone.$t}</li>
     			</ul>
     			<a href="https://www.petfinder.com/shelters/${item.shelterId.$t}.html" target="_blank" id="shelter-btn" class="btn btn-primary">Go to Shelter Site</a>
     			</div>

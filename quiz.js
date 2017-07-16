@@ -147,7 +147,7 @@ $('.submit').click(function(event){
 		return
 	}
 
-
+//at the end get the key that has the greatest value
 	max=0;
 	maxBreed=[];
 	for(breed in breeds){
@@ -159,46 +159,19 @@ $('.submit').click(function(event){
 	  		maxBreed.push(breed);
 	  }
 	}
-// console.log(maxBreed);
-
-localStorage.userBreeds = JSON.stringify(maxBreed);
-window.location = "results-search.html"
-
-//var maxBreed = JSON.parse(localStorage.userBreeds);
 
 
+	localStorage.userBreeds = JSON.stringify(maxBreed);
+	window.location = "results-search.html"
 
+	})
 
-
-
-
-
-})
-
-
-	
-
-$("button").click(function() {
-	    $('html,body').animate({
-	        scrollTop: $(this).siblings().offset().top},
-	        'slow');
-	});
-
-	
-
-
-	//at the end get the key that has the greatest value
-	
-
-
-
-
-	
-
-
-	  
-
-
+		
+	$("button").click(function() {
+		    $('html,body').animate({
+		        scrollTop: $(this).siblings().offset().top},
+		        'slow');
+		});
 
 
 });

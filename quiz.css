@@ -15,8 +15,11 @@
 
 body {
 	background-color: #fae6c9;
+	overflow-x: hidden;
 }
-
+body {
+	overflow-x: hidden;
+}
 .logo {
 	width: 30px; 
 	height: 30px;
@@ -67,6 +70,7 @@ a:hover {
 	text-align: center;
 	margin: 0 auto;
 	display: block;
+	cursor: pointer;
 }
 
 button:hover {
